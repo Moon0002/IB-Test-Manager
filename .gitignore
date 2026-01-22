@@ -78,8 +78,8 @@ wrangler.jsonc
 
 # Sensitive directories
 chrome-extension/
-app/api/
-lib/
+app/api/*
+lib/*
 
 # Sensitive chatbot component
 app/Chatbot.js
@@ -100,7 +100,7 @@ test-embed-urls.js
 public/_headers
 
 # Backend showcase exceptions
-!app/api/proxy-pdf/route.js
+!app/api/proxy-pdf/
 !lib/rate-limiter.js
 !lib/google-drive-file-service.js
 !lib/Google_drives_ervice.js
