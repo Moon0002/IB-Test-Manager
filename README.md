@@ -1,4 +1,4 @@
-# IB Test Manager - Cloudflare Version 2
+# IB Test Manager
 
 A comprehensive web application for managing and accessing International Baccalaureate (IB) past papers and audio files through Google Drive integration.
 
@@ -45,6 +45,8 @@ A comprehensive web application for managing and accessing International Baccala
 - **Next.js API Routes** - Serverless API endpoints
 - **Cloudflare Workers** - Edge computing platform
 - **OpenNext.js** - Next.js optimization for Cloudflare
+- **Custom Rate Limiter** - In-memory request throttling
+- **Streaming Proxy** - Secure file streaming service
 
 ### APIs & Services
 - **Google Drive API v3** - File storage and retrieval
@@ -94,20 +96,25 @@ A comprehensive web application for managing and accessing International Baccala
 ## 📁 Project Structure
 
 ```
-ib-test-manager-cloudflare-ver2/
+ib-test-manager/
 ├── app/                          # Next.js App Router
-│   ├── api/                      # API routes (serverless endpoints)
+│   ├── api/                      # API routes
+│   │   └── proxy-pdf/            # Secure file proxy
 │   ├── globals.css               # Global styles
 │   ├── layout.js                 # Root layout
 │   ├── page.js                   # Home page
 │   └── Chatbot.js                # Chatbot component
-├── components/                    # React components
-│   ├── StructuredPaperSelector.js # Main selector component
-│   ├── StructuredPaperSelector.css # Selector styles
-│   ├── Header.js                 # Header component
-│   └── Footer.js                 # Footer component
+├── components/                   # React components
+│   ├── StructuredPaperSelector.js
+│   ├── StructuredPaperSelector.css
+│   ├── Header.js
+│   └── Footer.js
+├── lib/                          # Backend logic
+│   ├── rate-limiter.js           # Custom rate limiting
+│   ├── google-drive-file-service.js # Drive service logic
+│   └── Google_drives_ervice.js   # Service base class
 ├── public/                       # Static assets
-│   ├── logo.png                  # App logo
+│   ├── logo.png
 └── package.json                  # Dependencies and scripts
 ```
 
@@ -123,8 +130,8 @@ ib-test-manager-cloudflare-ver2/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/ib-test-manager-cloudflare-ver2.git
-cd ib-test-manager-cloudflare-ver2
+git clone https://github.com/Moon0002/IB-Test-Manager.git
+cd ib-test-manager
 ```
 
 2. **Install dependencies**
