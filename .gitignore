@@ -1,0 +1,106 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+.open-next
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# OpenNext
+.open-next
+
+# wrangler files
+.wrangler
+.dev.vars*
+
+# Logs
+logs
+*.log
+dev-debug.log
+# Dependency directories
+node_modules/
+# Environment variables
+.env
+.env.local
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# OS specific
+
+# Cursor IDE configuration
+.cursor/
+.taskmaster/
+
+# Sensitive files
+.dev.vars
+.env.local
+.roomodes
+
+# Configuration files
+next.config.mjs
+tsconfig.json
+wrangler.jsonc
+
+# Sensitive directories
+chrome-extension/
+app/api/
+lib/
+
+# Sensitive chatbot component
+app/Chatbot.js
+
+# File extraction results
+extracted-file-ids.csv
+extracted-file-ids.json
+unparsed-files.json
+
+# Scripts directory
+scripts/
+
+# Test files
+test-sheets-integration.js
+test-embed-urls.js
+
+# Public headers
+public/_headers
+
+# Backend showcase exceptions
+!app/api/proxy-pdf/route.js
+!lib/rate-limiter.js
+!lib/google-drive-file-service.js
+!lib/Google_drives_ervice.js
